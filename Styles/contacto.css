@@ -1,0 +1,59 @@
+@import url("../global.css");
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  margin-bottom: 8px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 25px 25px 25px 25px;
+  border: solid black;
+}
+
+form,
+label,
+input,
+textarea {
+  padding: 0;
+  margin: 5px;
+}
+
+textarea {
+  display: block;
+  resize: none;
+}
+
+.links {
+  display: flex;
+}
+
+div a {
+  margin: 0 5px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #fff;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0);
+  color: var(--color);
+  font-size: 2em;
+}
+
+div a:hover {
+  background: var(--color);
+  color: #050801;
+  box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color),
+    0 0 200px var(--color);
+}
