@@ -1,33 +1,42 @@
 @import url("../global.css");
 @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
-main {
+.main {
+  background: #74020d;
   display: flex;
   flex-direction: row;
 }
 
 h1 {
+  background: #9d0207de;
+  color: #fff;
   margin-bottom: 8px;
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
   border-radius: 25px 25px 25px 25px;
-  border: solid black;
 }
 
 form,
 label,
 input,
-textarea {
+textarea,
+div {
   padding: 0;
   margin: 5px;
+  color: #fff;
+}
+
+input {
+  background: #9D0208;
 }
 
 textarea {
   display: block;
   resize: none;
+  background: #9D0208;
 }
 
 .links {
@@ -35,7 +44,7 @@ textarea {
 }
 
 div a {
-  margin: 0 5px;
+  margin: 5px 5px;
   box-sizing: border-box;
   border-radius: 50%;
   background: #fff;
@@ -56,4 +65,21 @@ div a:hover {
   color: #050801;
   box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color),
     0 0 200px var(--color);
+}
+
+.contain {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.resto {
+  border-radius: 10%;
+  width: 400px;
+  height: 300px;
+  display: flex;
+}
+
+.links {
+  flex-direction: column;
 }
