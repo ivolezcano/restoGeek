@@ -2,14 +2,15 @@
 @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
 .main {
-  background: #74020d;
+  /* background: #74020d; */
   display: flex;
   flex-direction: row;
+  /* background-image: url('../resources/image/background.png'); */
 }
 
 h1 {
-  background: #9d0207de;
-  color: #fff;
+  /* background: #9d0207de; */
+  /* color: #fff; */
   margin-bottom: 8px;
   width: fit-content;
   display: flex;
@@ -26,24 +27,24 @@ textarea,
 div {
   padding: 0;
   margin: 5px;
-  color: #fff;
+  /* color: #fff; */
 }
 
 input {
-  background: #9D0208;
+  /* background: #9D0208; */
 }
 
 textarea {
   display: block;
   resize: none;
-  background: #9D0208;
+  /* background: #9D0208; */
 }
 
 .links {
   display: flex;
 }
 
-div a {
+div.links a {
   margin: 5px 5px;
   box-sizing: border-box;
   border-radius: 50%;
