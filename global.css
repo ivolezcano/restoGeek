@@ -137,8 +137,8 @@ ul{
 
 .menu{
     position:relative;
-    width:270px;
-    height: 58px;
+    width:220px;
+    height: 170px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -171,7 +171,7 @@ ul{
     list-style:none;
     transition:0.5s;
     transform:rotate(calc(360deg/8 * var(--i)));
-    transform-origin:140px;
+    transform-origin:107px; /*140*/
     scale:0;
     transition-delay: calc(0.05s * var(--i));
   }
@@ -181,7 +181,7 @@ ul{
   .menu li a{
     position:relative;
     display:flex;
-   transform:rotate(calc(360deg/-8 * var(--i)));
+    transform:rotate(calc(360deg/-8 * var(--i)));
     width:60px;
     height:60px;
     background-color:#FFF;
@@ -191,14 +191,11 @@ ul{
     border-radius:50%;
     font-size:1.75rem;
     color:var(--clr);
-     box-shadow:0 3px 4px rgba(0,0,0,0.15);
+    box-shadow:0 3px 4px rgba(0,0,0,0.15);
     transition:0.5s;
   }
   .menu li:hover a{
     font-size:2.5rem;
     box-shadow:0 0 0 2px var(--clr),
       0 0 0 6px #fff;
-  }
-
-
-
+}
