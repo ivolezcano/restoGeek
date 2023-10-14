@@ -5,7 +5,6 @@
   /* background: #74020d; */
   display: flex;
   flex-direction: row;
-  /* background-image: url('../resources/image/background.png'); */
 }
 
 h1 {
@@ -23,11 +22,17 @@ h1 {
 form,
 label,
 input,
-textarea{
+textarea {
   padding: 0;
   margin: 5px;
   /* color: #fff; */
 }
+
+input {
+  /* background: #9D0208; */
+  background: #370617;
+}
+
 textarea {
   display: block;
   resize: none;
@@ -36,10 +41,10 @@ textarea {
 
 .links {
   display: flex;
+  flex-direction: column;
 }
 
-
-.linksDiv {
+div.links a {
   margin: 5px 5px;
   box-sizing: border-box;
   border-radius: 50%;
@@ -56,7 +61,7 @@ textarea {
   font-size: 2em;
 }
 
-.linksDiv:hover {
+div.links a:hover {
   background: var(--color);
   color: #050801;
   box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color),
@@ -74,8 +79,4 @@ textarea {
   width: 400px;
   height: 300px;
   display: flex;
-}
-
-.links {
-  flex-direction: column;
 }
