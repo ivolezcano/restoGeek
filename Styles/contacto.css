@@ -34,7 +34,7 @@ textarea {
   display: flex;
 }
 
-div a {
+.linksDiv {
   margin: 0 5px;
   box-sizing: border-box;
   border-radius: 50%;
