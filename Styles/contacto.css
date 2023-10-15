@@ -1,51 +1,153 @@
 @import url("../global.css");
 @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
+header {
+  /* background-color: #03071e; */
+}
+
 .main {
-  /* background: #74020d; */
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  height: fit-content;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
-  /* background: #9d0207de; */
-  /* color: #fff; */
-  margin-bottom: 8px;
+  padding: 14px;
+  background: #6a040f;
+  color: #fff;
+  margin: 15px 0px;
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   border-radius: 25px 25px 25px 25px;
+}
+
+/*formulario*/
+
+form {
+  margin-bottom: 15px;
 }
 
 form,
 label,
 input,
 textarea {
-  padding: 0;
-  margin: 5px;
-  /* color: #fff; */
+  margin-left: 5px;
+  display: block;
+  color: #fff;
+}
+
+label {
+  font-size: small;
 }
 
 input {
-  /* background: #9D0208; */
-  background: #370617;
+  padding: 5px;
+  border-radius: 25px;
+  background: #9d0208;
+  width: 85%;
+}
+input::placeholder {
+  color: #ffffff93;
 }
 
 textarea {
+  padding: 5px;
   display: block;
   resize: none;
-  /* background: #9D0208; */
+  border-radius: 15px;
+  background: #9d0208;
+  width: 85%;
 }
 
+.g-recaptcha {
+  margin: 0px 5px;
+  padding: 0;
+}
+
+#validarReCaptcha {
+  margin: 5px;
+  padding: 0;
+  color: red;
+}
+
+.btnSendForm {
+  margin: 15px;
+  padding: 5px;
+  border-radius: 13px;
+  background: #6a040f;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  border: 2px solid #111;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnSendForm:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(0, 0); /* Cambiado de (8px, 8px) a (0, 0) */
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.btnSendForm:hover:after {
+  transform: translate(8px, 8px); /* Cambiado de (0, 0) a (-8px, -8px) */
+}
+
+.btnSendForm:active {
+  background-color: #991102;
+  outline: 0;
+}
+
+.btnSendForm:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btnSendForm {
+    padding: 0 40px;
+  }
+}
+
+/*Redes y contacto*/
+.contain {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
 .links {
   display: flex;
   flex-direction: column;
 }
 
 div.links a {
-  margin: 5px 5px;
+  margin: 5px 8px;
   box-sizing: border-box;
   border-radius: 50%;
   background: #fff;
@@ -68,15 +170,11 @@ div.links a:hover {
     0 0 200px var(--color);
 }
 
-.contain {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-
+/* imagen */
 .resto {
-  border-radius: 10%;
+  display: flex;
   width: 400px;
   height: 300px;
-  display: flex;
+  border-radius: 20%;
+  /* box-shadow: 0px 0px 10px 10px #6a040f; */
 }

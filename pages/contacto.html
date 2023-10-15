@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restogeek | Contacto</title>
     <link rel="icon" href="/resources/image/favicon/faviconremove.png" />
-    <link rel="stylesheet" href="../styles/contacto.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Styles/contacto.css" />
   </head>
   <body>
     <div class="container">
@@ -24,30 +30,41 @@
             enctype="multipart/form-data"
             method="POST"
           >
-            <label for="nombre">Nombres:</label>
+            <label for="nombre"></label>
             <input
               type="text"
               id="nombre"
               name="nombre"
-              placeholder=""
+              placeholder="Nombre/s"
               required
             /><br />
 
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required /><br />
+            <label for="apellidos"></label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              placeholder="Apellido/s"
+              required
+            /><br />
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required /><br />
+            <label for="email"></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            /><br />
 
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required /><br />
-
-            <div
-              class="g-recaptcha"
-              data-sitekey="6Lddx4goAAAAAI8LnAgUSzzV2fLYr-BDhA7G94ju"
-            ></div>
-
-            <div id="validarReCaptcha"></div>
+            <label for="telefono"></label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Teléfono"
+              required
+            /><br />
 
             <label for="consulta">Consulta (máx. 150 caracteres):</label>
             <textarea
@@ -59,7 +76,21 @@
             ></textarea
             ><br />
 
-            <button type="submit">Enviar Consulta</button>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Lddx4goAAAAAI8LnAgUSzzV2fLYr-BDhA7G94ju"
+            ></div>
+
+            <div id="validarReCaptcha"></div>
+
+            <button
+              id="btnSendF"
+              class="btnSendForm"
+              role="button"
+              type="submit"
+            >
+              Enviar Consulta
+            </button>
           </form>
         </div>
 
@@ -98,7 +129,7 @@
             </div>
             <img
               class="resto"
-              src="https://ivsanctum.com/wp-content/uploads/2019/10/resto-bar3.jpg"
+              src="../resources/image/contacto-image.jpeg"
               alt="resto"
             />
           </div>
