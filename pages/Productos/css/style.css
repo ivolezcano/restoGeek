@@ -20,20 +20,54 @@ nav a:hover {
   width: 300px;
   background-color: #E85D04;
 }
-section{
-  height: calc(1/4 * 100);
-}
-section > img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  height: auto;
-  border-radius: 5%;
+
+.card{
+  background-color: white;
+  box-shadow: 0 3px 5px 0;
+  margin-bottom: 25px;
 }
 img{
   width: 100%;
 }
+/*Responsive*/
+/*Mobile*/
+@media only sreen and (max-width: 768px) {
+  .card{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: auto;
+  }
+}
+
+/*Computadoras*/
+@media only screen and (min-width: 768px){
+  .contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29%, 1fr));
+    grid-gap: 1em;
+  }
+  /*.card{
+    display: inline-block;
+    width: 40%;
+    margin: auto;
+    padding: auto;
+    
+  }*/
+}
+
+/*Tablets
+@media only screen and (min-width: 500px){
+  .card{
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 3px 5px 0;
+    margin-bottom: 25px;
+  }
+}*/
+
 /*Transicion*/
 .card{
   position: relative;
@@ -69,43 +103,3 @@ img{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/*Responsive*/
-/*Mobile*/
-@media only sreen and (max-width: 768px) {
-  .card{
-    display: flex;
-    flex-wrap: wrap;
-    width: 40%;
-    margin: auto;
-    background-color: white;
-    box-shadow: 0 3px 5px 0;
-    margin-bottom: 25px;
-    
-  }
-  
-}
-
-/*Computadoras*/
-@media only screen and (min-width: 768px){
-  .card{
-    display: inline-block;
-    padding: 0;
-    margin: auto;
-    width: 40%;
-    background-color: white;
-    box-shadow: 0 3px 5px 0;
-    margin-bottom: 25px;
-  }
-}
-
-/*Tablets
-@media only screen and (min-width: 500px){
-  .card{
-    display: inline-block;
-    width: 50%;
-    margin: auto;
-    background-color: white;
-    box-shadow: 0 3px 5px 0;
-    margin-bottom: 25px;
-  }
-}*/
