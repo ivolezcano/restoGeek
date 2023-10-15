@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   formulario.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    var response = grecaptcha.getRgitesponse();
+    var response = grecaptcha.getResponse();
 
     if (response.length === 0) {
       validarReCaptcha.innerHTML =
