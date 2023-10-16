@@ -1,37 +1,21 @@
 h1, h2{
   text-align: center;
 }
-nav {
-  /*background-color: #333;*/
-  color: #333;
-  padding: 10px;
-  text-align: center;
-  text-transform: uppercase;
-}
-  
-nav a {
-  text-decoration: none;
-  color: #333;
-  padding: 5px 10px;
-  transition: width 2s ease-in-out;
-}
-  
-nav a:hover {
-  width: 300px;
-  background-color: #E85D04;
-}
 
 .card{
   background-color: white;
   box-shadow: 0 3px 5px 0;
   margin-bottom: 25px;
 }
+.contenedor{
+  padding: 2em;
+}
 img{
   width: 100%;
 }
 /*Responsive*/
 /*Mobile*/
-@media only sreen and (max-width: 768px) {
+@media only sreen and (max-width: 500px) {
   .card{
     display: flex;
     flex-wrap: wrap;
@@ -39,34 +23,24 @@ img{
     margin: auto;
   }
 }
+/*Tablet*/
+@media only screen and (min-width: 500px){
+  .contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 2rem;
+  }
+}
 
-/*Computadoras*/
+/*Escritorio*/
 @media only screen and (min-width: 768px){
   .contenedor{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(29%, 1fr));
     grid-gap: 1em;
   }
-  /*.card{
-    display: inline-block;
-    width: 40%;
-    margin: auto;
-    padding: auto;
-    
-  }*/
 }
 
-/*Tablets
-@media only screen and (min-width: 500px){
-  .card{
-    display: inline-block;
-    width: 50%;
-    margin: auto;
-    background-color: white;
-    box-shadow: 0 3px 5px 0;
-    margin-bottom: 25px;
-  }
-}*/
 
 /*Transicion*/
 .card{
