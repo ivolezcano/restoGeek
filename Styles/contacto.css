@@ -1,14 +1,11 @@
 @import url("../global.css");
 @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
-header {
-  /* background-color: #03071e; */
-}
-
 .main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   height: fit-content;
   font-family: "Montserrat", sans-serif;
 }
@@ -66,6 +63,9 @@ textarea {
 .g-recaptcha {
   margin: 0px 5px;
   padding: 0;
+  width: fit-content;
+  transform: scale(1);
+  transform-origin: 0 0;
 }
 
 #validarReCaptcha {
@@ -111,13 +111,13 @@ textarea {
   width: 100%;
   position: absolute;
   top: -2px;
-  transform: translate(0, 0); /* Cambiado de (8px, 8px) a (0, 0) */
+  transform: translate(0, 0);
   transition: transform 0.2s ease-out;
   z-index: -1;
 }
 
 .btnSendForm:hover:after {
-  transform: translate(8px, 8px); /* Cambiado de (0, 0) a (-8px, -8px) */
+  transform: translate(8px, 8px);
 }
 
 .btnSendForm:active {
@@ -136,8 +136,14 @@ textarea {
 }
 
 /*Redes y contacto*/
+
+div.contacto > h1 {
+  margin-left: 8%;
+}
+
 .contain {
   display: flex;
+  justify-content: start;
   align-items: center;
   flex-direction: row-reverse;
 }
@@ -176,5 +182,97 @@ div.links a:hover {
   width: 400px;
   height: 300px;
   border-radius: 20%;
-  /* box-shadow: 0px 0px 10px 10px #6a040f; */
+}
+
+/*Media queries*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .form {
+    width: 80%;
+    margin-bottom: 2em;
+  }
+  .g-recaptcha {
+    transform: scale(0.7);
+  }
+  .btnSendForm {
+    margin-top: 0;
+  }
+  .contacto {
+    width: 80%;
+    margin-bottom: 2em;
+  }
+  div.contacto > h1 {
+    margin: 0;
+  }
+  .contain {
+    flex-direction: column;
+  }
+  .links {
+    flex-direction: row;
+  }
+  .resto {
+    height: 280px;
+    width: 290px;
+  }
+}
+
+/* Small devices (landscape phones, 576px - 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .form {
+    width: 70%;
+    margin-bottom: 2em;
+  }
+  .contacto {
+    margin-bottom: 2em;
+  }
+}
+
+/* Medium devices (tablets, 768px - 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .form {
+    width: 40%;
+    margin-bottom: 2em;
+  }
+  .contacto {
+    width: 40%;
+    margin-bottom: 2em;
+  }
+  .g-recaptcha {
+    transform: scale(0.8);
+  }
+  .contain {
+    flex-direction: column;
+  }
+  .links {
+    flex-direction: row;
+  }
+  .resto {
+    height: 280px;
+    width: 100%;
+  }
+}
+
+/* Large devices (desktops, more than 992px) */
+@media (min-width: 992px) {
+  .form {
+    width: 40%;
+    margin-bottom: 2em;
+  }
+  .contacto {
+    width: 50%;
+    margin-bottom: 2em;
+  }
+  .resto {
+    height: 400px;
+    width: 80%;
+    max-width: 550px;
+  }
+}
+
+/* Tall devices (desktops, more than 1050px)*/
+@media (min-height: 1050px) {
+  .main{
+    height: 100%;
+  }
 }
