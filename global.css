@@ -1,15 +1,16 @@
-/*Paleta de colores
-Rich black: #03071E
-Chocolate cosmos: #370617
-Rosewood: #6A040F
-Penn red: #9D0208
-Enginneering: #D00000
-Sinopla: #DC2F02
-Persimmon: #E85D04
-Princeton orange: #F48C06
-Orange (web): #FAA307
-Selective yellow: #FFBA08
-*/
+:root {
+  --rich-black: #03071E; /*TABLETA DE COLORES*/
+  --chocolate-cosmos: #370617;
+  --rosewood: #6A040F;
+  --penn-red: #9D0208;
+  --engineering: #D00000;
+  --sinopla: #DC2F02;
+  --persimmon: #E85D04;
+  --princeton-orange: #F48C06;
+  --orange-web: #FAA307;
+  --selective-yellow: #FFBA08;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -195,4 +196,97 @@ ul {
 .menu li:hover a {
   font-size: 2.5rem;
   box-shadow: 0 0 0 2px var(--clr), 0 0 0 6px #fff;
+}
+ /*NAVBAR*/
+
+header{
+  background-color: var(--chocolate-cosmos);
+  padding: 10px 0;
+}
+
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--selective-yellow);
+}
+
+.logo a{
+  text-decoration: none;
+  color: var(--selective-yellow);
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.navLinks{
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.navLinks li{
+  margin-right: 20px;
+}
+
+.navLinks a{
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover{
+  color: var(--selective-yellow);
+}
+
+/*Menu hamburguesa*/
+
+.menu-toggle{
+  display: none;
+  z-index: 2;
+}
+
+#menu-icon{
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+}
+
+@media (max-width: 767px){
+  .menu-toggle{
+    display: block;
+  }
+  .navLinks{
+    display: none;
+    flex-direction: column;
+    background-color: var(--chocolate-cosmos);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .navLinks.active{
+    display: flex;
+    z-index: 4;
+  }
+  .navLinks li{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
 }

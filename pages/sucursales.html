@@ -8,13 +8,92 @@
 </head>
 <body>
     <div class = 'container'>
-        <header>
-            <a href="/index.html">Volver</a>
-        </header>
+        <div>
+            <header>
+              <nav class="navbar">
+                <div class="logo"><a href="index.html"><img src="/resources/image/LogoResto.png" alt="Logo restoGeek"></a></div>
+                <div class="menu-toggle">
+                  <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
+                </div>
+                <ul class="navLinks">
+                  <li><a href="/index.html">Inicio</a></li>
+                  <li><a href="/pages/productos.html">Productos</a></li>
+                  <li><a href="/pages/contacto.html">Contacto</a></li>
+                  <li><a href="/pages/sucursales.html">Sucursales</a></li>
+                </ul>
+              </nav>
+            </header>
+        </div>
         <main>
             <h1>Bienvenido a Sucursales {usuario}</h1>
         </main>
-        <footer>footer</footer>
+        <footer class = 'footer'>
+            <div class = 'conteiner'>
+                <div class = 'row'>
+                    <div class="footer-col">
+                        <h4>RestoGeek</h4>
+                        <ul>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Productos</a></li>
+                            <li><a href="#">Politica de privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>DUDAS</h4>
+                        <ul>
+                            <li><a href="#">Envios</a></li>
+                            <li><a href="#">Preguntas Frecuentes</a></li>
+                            <li><a href="#">estado del pedido</a></li>
+                            <li><a href="#">opciones de pago</a></li>
+                        </ul>                        
+                    </div>
+                    <div class="footer-col">
+                        <div class="social-links">
+                            <div class="menu">
+                                <div class="toggle">
+                                  <ion-icon name="share-social"></ion-icon>
+                                  </div>
+                                
+                                    <li style="--i:0;--clr:#1877f2">
+                                    <a href="https://www.facebook.com/" target = '_blank'><ion-icon name="logo-facebook" ></ion-icon></a>
+                                  </li>
+                                  <li style="--i:1;--clr:#25d366">
+                                    <a href="https://api.whatsapp.com/send?phone=+1234567890&text=%C2%A1Hola%2C%20RestoGeek!%20Les%20quería%20consultar%20acerca%20de...%20" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                                  </li>
+                                  <li style="--i:2;--clr:#1da1f2">
+                                    <a href="https://twitter.com/" target='_blank'><ion-icon name="logo-twitter"></ion-icon></a>
+                                  </li>
+                                   <li style="--i:3;--clr:#FF5733">
+                                    <a href="https://www.reddit.com/" target="_blank"><ion-icon name="logo-reddit"></ion-icon></a>
+                                  </li>
+                                  <li style="--i:4;--clr:#0a66c2">
+                                    <a href="https://www.linkedin.com/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                                  </li>
+                                  <li style="--i:5;--clr:#c32aa3">
+                                    <a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                                  </li>
+                                  <li style="--i:6;--clr:#1b1e21">
+                                    <a href="https://github.com/ivolezcano/restoGeek.git" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                                  </li>
+                                  <li style="--i:7;--clr:#ff0000">
+                                    <a href="https://www.youtube.com/" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+                                  </li>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
+<script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="../script.js"></script>
 </html>
