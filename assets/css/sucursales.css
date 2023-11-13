@@ -1,4 +1,4 @@
-@import url("../global.css");
+@import url("/assets/css/global.css");
 
 .main {
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .row {
-  margin: 0;
+  margin: 2%;
   display: flex;
   justify-content: center;
   flex-direction: row;

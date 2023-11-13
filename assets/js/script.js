@@ -39,9 +39,23 @@ correctButton.addEventListener('click', () =>{
   sendApiRequest()
 })
 
-let inCorrectButton = document.querySelector('#answer2, #answer3, #answer4');
+let inCorrectButton1 = document.querySelector('#answer2');
 
-inCorrectButton.addEventListener('click', ()=>{
+inCorrectButton1.addEventListener('click', ()=>{
+  alert('Lo siento, la respuesta es INCORRECTA. Vuelva a intentarlo :(')
+  sendApiRequest()
+})
+
+let inCorrectButton2 = document.querySelector('#answer3');
+
+inCorrectButton2.addEventListener('click', ()=>{
+  alert('Lo siento, la respuesta es INCORRECTA. Vuelva a intentarlo :(')
+  sendApiRequest()
+})
+
+let inCorrectButton3 = document.querySelector('#answer4');
+
+inCorrectButton3.addEventListener('click', ()=>{
   alert('Lo siento, la respuesta es INCORRECTA. Vuelva a intentarlo :(')
   sendApiRequest()
 })
