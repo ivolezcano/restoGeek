@@ -38,22 +38,22 @@
   </template>
   
   <script>
-  import '../../../ionicons/dist/svg'
+  // import '../../../ionicons/dist/svg'
 
   export default {
     name: 'FooterComponent',
     data() {
       return {
-        socialLinks: [
-          { icon: 'logo-facebook', url: 'https://www.facebook.com/', color: '#1877f2' },
-          { icon: 'logo-whatsapp', url: 'https://api.whatsapp.com/send?phone=+1234567890&text=%C2%A1Hola%2C%20RestoGeek!%20Les%20quería%20consultar%20acerca%20de...%20', color: '#25d366' },
-          { icon: 'logo-twitter', url: 'https://twitter.com/', color: '#1da1f2' },
-          { icon: 'logo-reddit', url: 'https://www.reddit.com/', color: '#FF5733' },
-          { icon: 'logo-linkedin', url: 'https://www.linkedin.com/', color: '#0a66c2' },
-          { icon: 'logo-instagram', url: 'https://www.instagram.com/', color: '#c32aa3' },
-          { icon: 'logo-github', url: 'https://github.com/ivolezcano/restoGeek.git', color: '#1b1e21' },
-          { icon: 'logo-youtube', url: 'https://www.youtube.com/', color: '#ff0000' },
-        ],
+        // socialLinks: [
+        //   { icon: 'logo-facebook', url: 'https://www.facebook.com/', color: '#1877f2' },
+        //   { icon: 'logo-whatsapp', url: 'https://api.whatsapp.com/send?phone=+1234567890&text=%C2%A1Hola%2C%20RestoGeek!%20Les%20quería%20consultar%20acerca%20de...%20', color: '#25d366' },
+        //   { icon: 'logo-twitter', url: 'https://twitter.com/', color: '#1da1f2' },
+        //   { icon: 'logo-reddit', url: 'https://www.reddit.com/', color: '#FF5733' },
+        //   { icon: 'logo-linkedin', url: 'https://www.linkedin.com/', color: '#0a66c2' },
+        //   { icon: 'logo-instagram', url: 'https://www.instagram.com/', color: '#c32aa3' },
+        //   { icon: 'logo-github', url: 'https://github.com/ivolezcano/restoGeek.git', color: '#1b1e21' },
+        //   { icon: 'logo-youtube', url: 'https://www.youtube.com/', color: '#ff0000' },
+        // ],
       };
     },
     methods: {
