@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-      <div class="container">
+      <div class="conteiner">
         <div class="row">
           <div class="footer-col">
             <h4>RestoGeek</h4>
