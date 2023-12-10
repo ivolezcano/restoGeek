@@ -170,7 +170,7 @@
     list-style: none;
     transition: 0.5s;
     transform: rotate(calc(360deg / 8 * var(--i)));
-    transform-origin: 107px; /*140*/
+    transform-origin: 107px;
     scale: 0;
     transition-delay: calc(0.05s * var(--i));
   }

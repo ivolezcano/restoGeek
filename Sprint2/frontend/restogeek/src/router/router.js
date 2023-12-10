@@ -1,16 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router";
 //import Login from '../pages/Login.vue';
 //import Register from '../pages/Register.vue';
-import HomePage from '../pages/HomePage.vue'
-//import About from '../pages/About.vue';
-//import Promo from '../pages/Promo.vue';
-//import Menu from '../pages/Menu.vue';
-//import Cart from '../pages/Cart.vue';
-//import Checkout from '../pages/Checkout.vue';
-//import Thank from '../pages/Thank.vue';
-//import MyOrder from '../pages/MyOrder.vue';
-//import Admin from '../admin/Admin.vue';
-//import Dashboard from '../admin/Dashboard.vue';
+import HomePage from '../pages/HomePage.vue';
+import ContactUs from '../pages/ContactUs.vue';
+import SucurSales from '../pages/SucurSales.vue';
 
 
 const routes = [
@@ -19,61 +12,16 @@ const routes = [
     name: "HomePage",
     component: HomePage, 
   },
-//   {
-//     path: "/about",
-//     name: "About",
-//     component: About,
-//   },
-//   {
-//     path: "/promotions",
-//     name: "Promotions",
-//     component: Promo,
-//   },
-//   {
-//     path: "/menu",
-//     name: "Menu",
-//     component: Menu,
-//   },
-//   {
-//     path: "/cart",
-//     name: "Cart",
-//     component: Cart,
-//   },
-  //{
-    //path: "/login",
-    //name: "Login",
-    //component: Login,
-  //},
-  //{
-    //path: "/register",
-    //name: "Register",
-    //component: Register,
-  //},
-//   {
-//     path: "/checkout",
-//     name: "Checkout",
-//     component: Checkout,
-//   },
-//   {
-//     path: "/thank",
-//     name: "Thank",
-//     component: Thank,
-//   },
-//   {
-//     path: "/myorder",
-//     name: "MyOrder",
-//     component: MyOrder,
-//   },
-  //{
-    //path: "/admin",
-    //name: "Admin",
-    //component: Admin,
-  //},
-  //{
-    //path: "/admin/dashboard",
-    //name: "Dashboard",
-    //component: Dashboard,
-  //},
+  {
+    path: "/ContactUs",
+    name: "ContactUs",
+    component: ContactUs, 
+  },
+  {
+    path: "/SucurSales",
+    name: "SucurSales",
+    component: SucurSales, 
+  },
   {
     path: '/:pathMatch(.*)*',
     component: HomePage,

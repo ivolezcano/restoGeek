@@ -24,7 +24,7 @@
             nuestra sección de 'Contacto' donde puedes dejarnos tus consultas, comentarios o sugerencias. Tampoco dudes en
             escibirnos para obtener más información sobre las oportunidades de carrera y enviarnos tu CV. Esperamos
             conocerte y trabajar juntos para brindar experiencias culinarias excepcionales a nuestros clientes</p>
-          <a href="#"><button>Ingresar</button></a>
+          <a href="/ContactUs"><button>Ingresar</button></a>
         </div>
       </section>
       <section class="section" id="section3">
@@ -41,41 +41,19 @@
           <img src="../assets/img/seccion3.jpg" alt="Contacto" height="100%" width="100%">
         </div>
       </section>
-      <section id="section4"> <!--API trivia por un descuento-->
-        <h1 align='center'>¡ Jugá por un descuento !</h1>
-        <p id="question"></p>
-        <button id="answer1"></button>
-        <button id="answer2"></button>
-        <button id="answer3"></button>
-        <button id="answer4"></button>
-      </section>
     </main>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
 
 }
 
 </script>
 
 <style>
-:root {
-  --rich-black: #03071E;
-  /*TABLETA DE COLORES*/
-  --chocolate-cosmos: #370617;
-  --rosewood: #6A040F;
-  --penn-red: #9D0208;
-  --engineering: #D00000;
-  --sinopla: #DC2F02;
-  --persimmon: #E85D04;
-  --princeton-orange: #F48C06;
-  --orange-web: #FAA307;
-  --selective-yellow: #FFBA08;
-}
-
 .cuerpo {
   scroll-snap-type: y mandatory;
 }
@@ -200,29 +178,4 @@ section h1 {
   font-size: 18px;
   margin: 20px 0;
 }
-
-/* Estilo para los botones de respuestas */
-#section4 button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 16px;
-  text-align: center;
-  background-color: #DC2F02;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Estilo para los botones de respuestas al pasar el ratón */
-#section4 button:hover {
-  background-color: #9D0208;
-}
-
-/* Estilo para espaciar los botones */
-#section4 button+#section4 button {
-  margin-top: 5px;
-}</style>
+</style>

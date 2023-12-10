@@ -1,76 +1,77 @@
 <template>
-    <footer class="footer">
-      <div class="conteiner">
-        <div class="row">
-          <div class="footer-col">
-            <h4>RestoGeek</h4>
-            <ul>
-              <li><router-link to="/">Nosotros</router-link></li>
-              <li><router-link to="/contacto">Contacto</router-link></li>
-              <li><router-link to="/productos">Productos</router-link></li>
-              <li><router-link to="/politica-privacidad">Politica de privacidad</router-link></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>DUDAS</h4>
-            <ul>
-              <li><router-link to="/envios">Envios</router-link></li>
-              <li><router-link to="/preguntas-frecuentes">Preguntas Frecuentes</router-link></li>
-              <li><router-link to="/estado-pedido">Estado del Pedido</router-link></li>
-              <li><router-link to="/opciones-pago">Opciones de Pago</router-link></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <div class="social-links">
-              <div class="menu">
-                <div class="toggle">
-                  <ion-icon name="share-social"></ion-icon>
-                </div>
-                <li v-for="(link, index) in socialLinks" :key="index" :style="{ '--i': index, '--clr': link.color }">
-                <a :href="link.url" target="_blank" v-html="getIconSvg(link.icon)"></a>
-                </li>
+  <footer class="footer">
+    <div class="conteiner">
+      <div class="row">
+        <div class="footer-col">
+          <h4>RestoGeek</h4>
+          <ul>
+            <li><router-link to="/">Nosotros</router-link></li>
+            <li><router-link to="/contacto">Contacto</router-link></li>
+            <li><router-link to="/productos">Productos</router-link></li>
+            <li><router-link to="/politica-privacidad">Politica de privacidad</router-link></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>DUDAS</h4>
+          <ul>
+            <li><router-link to="/envios">Envios</router-link></li>
+            <li><router-link to="/preguntas-frecuentes">Preguntas Frecuentes</router-link></li>
+            <li><router-link to="/estado-pedido">Estado del Pedido</router-link></li>
+            <li><router-link to="/opciones-pago">Opciones de Pago</router-link></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="social-links">
+            <div class="menu">
+              <div class="toggle">
+                <ion-icon name="share-social"></ion-icon>
               </div>
+              <li v-for="(link, index) in socialLinks" :key="index" :style="{ '--i': index, '--clr': link.color }">
+                <a :href="link.url" target="_blank" v-html="getIconSvg(link.icon)"></a>
+              </li>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </template>
+    </div>
+  </footer>
+</template>
   
-  <script>
-  // import '../../../ionicons/dist/svg'
+<script>
+// import '../../../ionicons/dist/svg'
 
-  export default {
-    name: 'FooterComponent',
-    data() {
-      return {
-        // socialLinks: [
-        //   { icon: 'logo-facebook', url: 'https://www.facebook.com/', color: '#1877f2' },
-        //   { icon: 'logo-whatsapp', url: 'https://api.whatsapp.com/send?phone=+1234567890&text=%C2%A1Hola%2C%20RestoGeek!%20Les%20quería%20consultar%20acerca%20de...%20', color: '#25d366' },
-        //   { icon: 'logo-twitter', url: 'https://twitter.com/', color: '#1da1f2' },
-        //   { icon: 'logo-reddit', url: 'https://www.reddit.com/', color: '#FF5733' },
-        //   { icon: 'logo-linkedin', url: 'https://www.linkedin.com/', color: '#0a66c2' },
-        //   { icon: 'logo-instagram', url: 'https://www.instagram.com/', color: '#c32aa3' },
-        //   { icon: 'logo-github', url: 'https://github.com/ivolezcano/restoGeek.git', color: '#1b1e21' },
-        //   { icon: 'logo-youtube', url: 'https://www.youtube.com/', color: '#ff0000' },
-        // ],
-      };
-    },
-    methods: {
+export default {
+  name: 'FooterComponent',
+  data() {
+    return {
+      // socialLinks: [
+      //   { icon: 'logo-facebook', url: 'https://www.facebook.com/', color: '#1877f2' },
+      //   { icon: 'logo-whatsapp', url: 'https://api.whatsapp.com/send?phone=+1234567890&text=%C2%A1Hola%2C%20RestoGeek!%20Les%20quería%20consultar%20acerca%20de...%20', color: '#25d366' },
+      //   { icon: 'logo-twitter', url: 'https://twitter.com/', color: '#1da1f2' },
+      //   { icon: 'logo-reddit', url: 'https://www.reddit.com/', color: '#FF5733' },
+      //   { icon: 'logo-linkedin', url: 'https://www.linkedin.com/', color: '#0a66c2' },
+      //   { icon: 'logo-instagram', url: 'https://www.instagram.com/', color: '#c32aa3' },
+      //   { icon: 'logo-github', url: 'https://github.com/ivolezcano/restoGeek.git', color: '#1b1e21' },
+      //   { icon: 'logo-youtube', url: 'https://www.youtube.com/', color: '#ff0000' },
+      // ],
+    };
+  },
+  methods: {
     getIconSvg(iconName) {
       const iconData = window.Ionicons.icons[iconName];
       return iconData ? iconData.svg : '';
-    }},
-    mounted() {
+    }
+  },
+  mounted() {
     const menu = this.$el.querySelector(".menu");
     const toggle = this.$el.querySelector(".toggle");
 
     toggle.addEventListener("click", () => {
       menu.classList.toggle("active");
-      });
-    },
-  };
-  </script>
+    });
+  },
+};
+</script>
 
 <style scoped>
 /*Estilos footer*/
@@ -78,13 +79,16 @@
   max-width: 1170px;
   margin: auto;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
 }
+
 ul {
   list-style: none;
 }
+
 .footer {
   background-color: #03071e;
   display: block;
@@ -92,10 +96,12 @@ ul {
   position: relative;
   z-index: 1;
 }
+
 .footer-col {
   width: 33%;
   padding: 0 15px;
 }
+
 .footer-col h4 {
   font-size: 18px;
   color: #ffffff;
@@ -104,6 +110,7 @@ ul {
   font-weight: 500;
   position: relative;
 }
+
 .footer-col h4::before {
   content: "";
   position: absolute;
@@ -114,9 +121,11 @@ ul {
   box-sizing: border-box;
   width: 50px;
 }
+
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
+
 .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
@@ -127,10 +136,12 @@ ul {
   display: block;
   transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover {
   color: #ffffff;
   padding-left: 8px;
 }
+
 .footer-col .social-links a {
   display: flex;
   align-items: center;
@@ -144,6 +155,7 @@ ul {
   color: #ffffff;
   transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #ffffff;
@@ -156,6 +168,7 @@ ul {
     margin-bottom: 30px;
   }
 }
+
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
@@ -172,6 +185,7 @@ ul {
   align-items: center;
   justify-content: center;
 }
+
 .menu .toggle {
   position: relative;
   height: 60px;
@@ -188,23 +202,28 @@ ul {
   transition: 1.25s;
   z-index: 5;
 }
+
 .menu.active .toggle {
   transform: rotate(360deg);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 0 0 2px #333, 0 0 0 8px #fff;
 }
+
 .menu li {
   position: absolute;
   left: 0;
   list-style: none;
   transition: 0.5s;
   transform: rotate(calc(360deg / 8 * var(--i)));
-  transform-origin: 107px; /*140*/
+  transform-origin: 107px;
+  /*140*/
   scale: 0;
   transition-delay: calc(0.05s * var(--i));
 }
+
 .menu.active li {
   scale: 1;
 }
+
 .menu li a {
   position: relative;
   display: flex;
@@ -221,8 +240,8 @@ ul {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
 }
+
 .menu li:hover a {
   font-size: 2.5rem;
   box-shadow: 0 0 0 2px var(--clr), 0 0 0 6px #fff;
-}
-</style>
+}</style>

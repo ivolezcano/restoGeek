@@ -8,7 +8,7 @@
                     <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
                 </div>
                 <ul class="navLinks">
-                    <li><a href="#">Inicio</a></li>
+                    <li><router-link to="/">Inicio</router-link></li>
                     <li class='dropdown'><a>Productos</a>
                         <ul class="dropdownMenu">
                             <li><a href="#">Desayunos/Meriendas</a></li>
@@ -17,8 +17,8 @@
                             <li><a href="#">Bebidas</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Sucursales</a></li>
+                    <li><router-link to="/ContactUs">Contacto</router-link></li>
+                    <li><router-link to="/SucurSales">Sucursales</router-link></li>
                 </ul>
             </nav>
         </header>
