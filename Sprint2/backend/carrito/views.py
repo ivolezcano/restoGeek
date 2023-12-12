@@ -43,8 +43,27 @@ class ProductosView(View):
         datos = {'message': 'Success'}
         return JsonResponse(datos)
 
-    def put(self, request):
-        pass
+    def put(self, request, id=None):
 
-    def delete(self, request):
-        pass
+        jd = json.loads(request.body)
+        productos = list(Productos.objects.values())
+        if len(productos) > 0:
+            producto = Productos.objects.get(id=id)
+            producto.nombre = jd['nombre']
+            producto.descripcion = jd['descripcion']
+            producto.precio = jd['precio']
+            producto.cantidad_disponible = jd['cantidad_disponible']
+            producto.save()
+            datos = {'message': 'Success'}
+        else:
+            datos = {'message': 'Error al actualizar el producto'}
+        return JsonResponse(datos)
+
+    def delete(self, request, id=None):
+        productos = list(Productos.objects.filter(id=id).values())
+        if len(productos) > 0:
+            Productos.objects.filter(id=id).delete()
+            datos = {'message': 'Success'}
+        else:
+            datos = {'message': 'Error al eliminar el producto NO EXISTE'}
+        return JsonResponse(datos)
