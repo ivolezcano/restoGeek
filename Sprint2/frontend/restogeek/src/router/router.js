@@ -1,9 +1,8 @@
 import { createWebHistory, createRouter } from "vue-router";
-//import Login from '../pages/Login.vue';
-//import Register from '../pages/Register.vue';
 import HomePage from '../pages/HomePage.vue';
 import ContactUs from '../pages/ContactUs.vue';
 import SucurSales from '../pages/SucurSales.vue';
+import ProductosMenu from '../pages/ProductosMenu.vue';
 
 
 const routes = [
@@ -21,6 +20,11 @@ const routes = [
     path: "/SucurSales",
     name: "SucurSales",
     component: SucurSales, 
+  },
+  {
+    path: "/Menu",
+    name: "ProductosMenu",
+    component: ProductosMenu, 
   },
   {
     path: '/:pathMatch(.*)*',

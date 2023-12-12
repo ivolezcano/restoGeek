@@ -9,14 +9,7 @@
                 </div>
                 <ul class="navLinks">
                     <li><router-link to="/">Inicio</router-link></li>
-                    <li class='dropdown'><a>Productos</a>
-                        <ul class="dropdownMenu">
-                            <li><a href="#">Desayunos/Meriendas</a></li>
-                            <li><a href="#">Almuerzos/Cenas</a></li>
-                            <li><a href="#">Postres</a></li>
-                            <li><a href="#">Bebidas</a></li>
-                        </ul>
-                    </li>
+                    <li ><router-link to="/Menu">Menú</router-link></li>
                     <li><router-link to="/ContactUs">Contacto</router-link></li>
                     <li><router-link to="/SucurSales">Sucursales</router-link></li>
                 </ul>

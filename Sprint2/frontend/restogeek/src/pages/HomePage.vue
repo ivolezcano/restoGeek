@@ -35,7 +35,7 @@
             Ya sea que estés planeando una visita o simplemente buscando la comodidad de una comida deliciosa cerca de tu
             hogar, nuestras múltiples ubicaciones están diseñadas para satisfacer tus necesidades. ¡Encuentra la sucursal
             más cercana y ven a disfrutar de nuestra cocina excepcional hoy mismo!</p>
-          <a href="#"><button>Ingresar</button></a>
+          <a href="/SucurSales"><button>Ingresar</button></a>
         </div>
         <div class="section-right">
           <img src="../assets/img/seccion3.jpg" alt="Contacto" height="100%" width="100%">
