@@ -6,32 +6,17 @@
                     <h3 class="card-title-menu">{{ product.nombre }}</h3>
                     <p id="card-text-menu" class="card-text-menu">{{ product.descripcion }}</p>
                     <p class="card-precio-menu">${{ product.precio }}</p>
-                    <button class="btn btn-primary" v-on:click="eliminar(product.id)">Eliminar</button>
+                    <div class="botones">
+                        <router-link :to="{path:'EditProduct/'+product.id}"><button id="btn-eliminar" class="btn btn-primary" >Modificar</button></router-link>                       
+                    <button id="btn-eliminar" class="btn btn-primary" v-on:click="eliminar(product.id)">Eliminar</button>
+                    </div>
+                    
                 </div>
 
             </div>
 
-            <!-- <h2>Agregar Producto</h2> -->
+            <a href="/CreateProduct"><button>Añadir Producto</button></a>
 
-            <form id="productForm" style="display: none;">
-                <label for="nombre">Nombre del Producto:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <br>
-
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" required></textarea>
-                <br>
-
-                <label for="precio">Precio:</label>
-                <input type="number" id="precio" name="precio" step="0.01" required>
-                <br>
-
-                <label for="cantidad">Cantidad Disponible:</label>
-                <input type="number" id="cantidad" name="cantidad" required>
-                <br>
-
-                <button type="button" >Agregar Producto</button>
-            </form>
         </main>
 
     </div>
@@ -70,6 +55,10 @@ export default {
         },
         eliminar(id) {
             enviarSolicitud(id);
+            window.setTimeout(function () {
+                window.location.reload();
+            },1000);
+            
         }
 
 
@@ -83,6 +72,7 @@ export default {
 <style>
 main.cuerpo {
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 h1,
@@ -103,6 +93,7 @@ h2 {
 
 .card-body {
     display: flex;
+    align-items: center;
     padding: 0 0.5em;
     width: 100%;
 }
@@ -139,7 +130,14 @@ h2 {
     color: black;
     width: 15%;
 }
-
+#btn-eliminar {
+    height: fit-content;
+    margin: 0.5em;
+}
+.botones {
+    display: flex;
+    flex-direction: column;
+}
 .contenedor {
     padding: 2em;
 }

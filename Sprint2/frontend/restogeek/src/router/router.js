@@ -3,6 +3,8 @@ import HomePage from '../pages/HomePage.vue';
 import ContactUs from '../pages/ContactUs.vue';
 import SucurSales from '../pages/SucurSales.vue';
 import ProductosMenu from '../pages/ProductosMenu.vue';
+import CreateProduct from '../pages/CreateProduct.vue';
+import EditProduct from '../pages/EditProduct';
 
 
 const routes = [
@@ -25,6 +27,16 @@ const routes = [
     path: "/Menu",
     name: "ProductosMenu",
     component: ProductosMenu, 
+  },
+  {
+    path: "/CreateProduct",
+    name: "CreateProduct",
+    component: CreateProduct, 
+  },
+  {
+    path: "/EditProduct/:id",
+    name: "EditProduct",
+    component: EditProduct, 
   },
   {
     path: '/:pathMatch(.*)*',

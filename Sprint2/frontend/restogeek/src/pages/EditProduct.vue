@@ -1,0 +1,107 @@
+<template>
+    <div>
+        <main class="cuerpo">
+            <form id="productForm">
+                <label for="nombre">Nombre del Producto:</label>
+                <input type="text" v-model="nombre" id="nombre" name="nombre" required>
+                <br>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" v-model="descripcion" name="descripcion" required></textarea>
+                <br>
+
+                <label for="precio">Precio:</label>
+                <input type="number" v-model="precio" id="precio" name="precio" step="0.01" required>
+                <br>
+
+                <label for="cantidad">Cantidad Disponible:</label>
+                <input type="number" v-model="cantidad_disponible" id="cantidad" name="cantidad_disponible" required>
+                <br>
+
+                <button type="submit" @click="guardar()">Agregar Producto</button>
+            </form>
+        </main>
+
+    </div>
+</template>
+
+<script>
+import { useRoute } from 'vue-router';
+import axios from 'axios';
+
+export default {
+    data() {
+        return {
+            nombre: '', descripcion: '', precio: '', cantidad_disponible: '', url: 'https://ivanpython2.pythonanywhere.com/carrito/productos/'
+        }
+    },
+    mounted() {
+        const route = useRoute();
+        this.id = route.params.id;
+        this.url = this.url + '/' + this.id;
+        this.getProduct();
+    },
+
+    methods: {
+        getProduct() {
+            axios.get(this.url).then(
+                response => {
+                    this.nombre = response.data.nombre;
+                    this.descripcion = response.data.descripcion;
+                    this.precio = response.data.precio;
+                    this.cantidad_disponible = response.data.cantidad_disponible;
+                })
+        },
+        guardar() {
+            event.preventDefault();
+            if (this.nombre.trim() === '') {
+                alert('El nombre del producto no puede estar vacio');
+            }
+            else if (this.descripcion === '') {
+                alert('La descripción del producto no puede estar vacia');
+            }
+            else if (this.precio == 0) {
+                alert('El precio del producto no puede ser cero');
+            }
+            else if (this.cantidad_disponible === 0) {
+                alert('La cantidad disponible del producto no puede ser cero');
+            }
+            else {
+
+                fetch(this.url, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        nombre: this.nombre,
+                        descripcion: this.descripcion,
+                        precio: this.precio,
+                        cantidad_disponible: this.cantidad_disponible
+                    })
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error al modificar el producto');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Producto modificado con éxito:', data);
+                        // Puedes realizar otras acciones después de modificar el producto
+                    })
+                    .catch(error => {
+                        console.error('Error al modificar el producto:', error);
+                        // Puedes mostrar un mensaje de error al usuario
+                    });
+
+            }
+            window.setTimeout(function () {
+                window.location.href = '../Menu'
+            }, 1000);
+
+        },
+
+    }
+}
+</script>
