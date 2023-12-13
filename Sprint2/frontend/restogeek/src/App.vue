@@ -2,8 +2,8 @@
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   <div class = "container">
     <NavBar />
-  <router-view></router-view>
-  <FooterComponent />
+    <router-view></router-view>
+    <FooterComponent />
   </div>
   
 </template>
@@ -11,6 +11,7 @@
 <script>
 import FooterComponent from '@/components/footer/Footer.vue'
 import NavBar from '@/components/navbar/NavBar.vue'
+
 
 export default {
   name: 'App',

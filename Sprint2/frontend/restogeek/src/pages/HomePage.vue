@@ -8,7 +8,7 @@
             elaborado, ofrece una amplia gama de deliciosas opciones que satisfarán todos los gustos. Desde platos
             clásicos hasta creaciones innovadoras, nuestra cocina te sorprenderá en cada bocado. ¡Explora nuestro menú y
             déjate llevar por una experiencia gastronómica que despertará tus sentidos y te hará regresar por más!</p>
-          <a href="#"><button>Ingresar</button></a>
+          <a href="/Menu"><button>Ingresar</button></a>
         </div>
         <div class="section-right">
           <img src="../assets/img/seccion1.png" alt="Menú" height="100%" width="100%">
@@ -135,7 +135,7 @@ main a {
 }
 
 section h1 {
-  color: var(--penn-red);
+  color: white;
   font-size: 24px;
   font-family: 'Arial', sans-serif;
   text-transform: uppercase;

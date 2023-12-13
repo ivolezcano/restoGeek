@@ -2,20 +2,20 @@
     <div>
         <main class="cuerpo">
             <form id="productForm">
-                <label for="nombre">Nombre del Producto:</label>
-                <input type="text" v-model="nombre" id="nombre" name="nombre" required>
+                <label class="form-label" for="nombre">Nombre del Producto:</label>
+                <input class="form-input" type="text" v-model="nombre" id="nombre" name="nombre" required>
                 <br>
 
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" v-model="descripcion" name="descripcion" required></textarea>
+                <label class="form-label" for="descripcion">Descripción:</label>
+                <textarea class="form-input" id="descripcion" v-model="descripcion" name="descripcion" required></textarea>
                 <br>
 
-                <label for="precio">Precio:</label>
-                <input type="number" v-model="precio" id="precio" name="precio" step="0.01" required>
+                <label class="form-label" for="precio">Precio:</label>
+                <input class="form-input" type="number" v-model="precio" id="precio" name="precio" step="0.01" required>
                 <br>
 
-                <label for="cantidad">Cantidad Disponible:</label>
-                <input type="number" v-model="cantidad_disponible" id="cantidad" name="cantidad_disponible" required>
+                <label class="form-label" for="cantidad">Cantidad Disponible:</label>
+                <input class="form-input" type="number" v-model="cantidad_disponible" id="cantidad" name="cantidad_disponible" required>
                 <br>
 
                 <button type="submit" @click="guardar()">Agregar Producto</button>
@@ -73,3 +73,24 @@ export default {
     }
 }
 </script>
+<style scoped>
+.form-label {
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 5px;
+    display: block;
+    backdrop-filter: blur(5px); 
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 8px;
+    border-radius: 5px;
+}
+.form-input {
+    width: 100%; 
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+</style>
+

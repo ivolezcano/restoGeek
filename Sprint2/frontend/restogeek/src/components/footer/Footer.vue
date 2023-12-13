@@ -23,37 +23,48 @@
         <div class="footer-col">
           <div class="social-links">
             <div class="menu">
-              <div class="toggle">
-                <ion-icon name="share-social"></ion-icon>
-              </div>
-              <li v-for="(link, index) in socialLinks" :key="index" :style="{ '--i': index, '--clr': link.color }">
-                <a :href="link.url" target="_blank" v-html="getIconSvg(link.icon)"></a>
-              </li>
+                <div class="toggle">
+                  <font-awesome-icon icon="fa-solid fa-share-nodes" />
+                  </div>
+                
+                    <li style="--i:0;--clr:#1877f2">
+                    <a href="https://www.facebook.com/" target = '_blank'><font-awesome-icon icon="fa-brands fa-facebook" /></a>
+                  </li>
+                  <li style="--i:1;--clr:#25d366">
+                    <a href="https://api.whatsapp.com/send?phone=+1234567890&text=%C2%A1Hola%2C%20RestoGeek!%20Les%20quería%20consultar%20acerca%20de...%20" target="_blank"><font-awesome-icon icon="fa-brands fa-whatsapp" /></a>
+                  </li>
+                  <li style="--i:2;--clr:#1da1f2">
+                    <a href="https://twitter.com/" target='_blank'><font-awesome-icon icon="fa-brands fa-x-twitter" /></a>
+                  </li>
+                    <li style="--i:3;--clr:#FF5733">
+                    <a href="https://www.reddit.com/" target="_blank"><font-awesome-icon icon="fa-brands fa-reddit-alien" /></a>
+                  </li>
+                  <li style="--i:4;--clr:#0a66c2">
+                    <a href="https://www.linkedin.com/" target="_blank"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
+                  </li>
+                  <li style="--i:5;--clr:#c32aa3">
+                    <a href="https://www.instagram.com/" target="_blank"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
+                  </li>
+                  <li style="--i:6;--clr:#1b1e21">
+                    <a href="https://github.com/ivolezcano/restoGeek.git" target="_blank"><font-awesome-icon icon="fa-brands fa-github" /></a>
+                  </li>
+                  <li style="--i:7;--clr:#ff0000">
+                    <a href="https://www.youtube.com/" target="_blank"><font-awesome-icon icon="fa-brands fa-youtube" /></a>
+                  </li>
+                </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </footer>
 </template>
   
 <script>
-// import '../../../ionicons/dist/svg'
 
 export default {
   name: 'FooterComponent',
   data() {
     return {
-      // socialLinks: [
-      //   { icon: 'logo-facebook', url: 'https://www.facebook.com/', color: '#1877f2' },
-      //   { icon: 'logo-whatsapp', url: 'https://api.whatsapp.com/send?phone=+1234567890&text=%C2%A1Hola%2C%20RestoGeek!%20Les%20quería%20consultar%20acerca%20de...%20', color: '#25d366' },
-      //   { icon: 'logo-twitter', url: 'https://twitter.com/', color: '#1da1f2' },
-      //   { icon: 'logo-reddit', url: 'https://www.reddit.com/', color: '#FF5733' },
-      //   { icon: 'logo-linkedin', url: 'https://www.linkedin.com/', color: '#0a66c2' },
-      //   { icon: 'logo-instagram', url: 'https://www.instagram.com/', color: '#c32aa3' },
-      //   { icon: 'logo-github', url: 'https://github.com/ivolezcano/restoGeek.git', color: '#1b1e21' },
-      //   { icon: 'logo-youtube', url: 'https://www.youtube.com/', color: '#ff0000' },
-      // ],
     };
   },
   methods: {
