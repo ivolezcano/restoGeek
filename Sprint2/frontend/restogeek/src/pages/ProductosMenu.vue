@@ -23,7 +23,6 @@
 </template>
 
 <script>
-// import axios from 'axios';
 import { enviarSolicitud } from '../funciones.js';
 
 export default {
@@ -57,16 +56,10 @@ export default {
             enviarSolicitud(id);
             window.setTimeout(function () {
                 window.location.reload();
-            },1000);
-            
-        }
-
-
-        
+            },1000);         
+        }      
     }
-
 }
-
 </script>
 
 <style>

@@ -67,7 +67,6 @@ export default {
   justify-content: space-between;
   height: 80vh;
   padding: 20px;
-  /*opacity: 0;*/
   transform: translateX(-10px);
 }
 

@@ -35,16 +35,16 @@ export default {
     methods: {
         guardar() {
             event.preventDefault();
-            if (this.nombre.trim() === '') {
+            if (this.nombre == '') {
                 alert('El nombre del producto no puede estar vacio');
             }
-            else if (this.descripcion === '') {
+            else if (this.descripcion == '') {
                 alert('La descripción del producto no puede estar vacia');
             }
             else if (this.precio == 0) {
                 alert('El precio del producto no puede ser cero');
             }
-            else if (this.cantidad_disponible === 0) {
+            else if (this.cantidad_disponible == 0) {
                 alert('La cantidad disponible del producto no puede ser cero');
             }
             else {
@@ -61,13 +61,18 @@ export default {
                         cantidad_disponible: this.cantidad_disponible
                     })
                 })
-                    .then(response => response.json())
-                    
+                .then(response => {
+                        if (!response.ok) {
+                            alert('Error al agregar el producto');
+                            throw new Error('Error al modificar el producto');
+                        } else {
+                            alert('Producto agregado con éxito');
+                            window.setTimeout(function () {
+                                window.location.href = '../Menu';
+                            }, 1000);
+                        }
+                    })
             }
-            window.setTimeout(function () {
-                window.location.href = '../Menu'
-            },1000);
-
         },
 
     }

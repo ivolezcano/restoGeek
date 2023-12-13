@@ -3,7 +3,8 @@
         <main class="main">
             <div class="form">
                 <h1>Envianos tu opinión</h1>
-                <form id="miFormulario" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
+                <form action="https://formspree.io/f/xwkdgdag" id="miFormulario" accept-charset="UTF-8"
+                    enctype="multipart/form-data" method="POST">
                     <label for="nombre"></label>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre/s" required /><br />
 
@@ -47,7 +48,7 @@
                 </div>
             </div>
         </main>
-        
+
     </div>
 </template>
 
@@ -55,30 +56,6 @@
 export default {
     name: "ContactUs",
     mounted() {
-        document.addEventListener("DOMContentLoaded", function () {
-            var formulario = document.getElementById("miFormulario");
-            var botonEnviar = document.getElementById("btnSendF");
-
-            formulario.addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                fetch("https://formkeep.com/f/93382513db8e", {
-                        method: "POST",
-                        body: new FormData(formulario),
-                    })
-                        .then((response) => {
-                            if (response.ok) {
-                                botonEnviar.textContent = "¡Formulario Enviado!";
-                                console.log("Formulario enviado correctamente");
-                                formulario.reset();
-                            }
-                        })
-                        .catch((error) => {
-                            console.error("Error al enviar el formulario: ", error);
-                        });
-
-            });
-        });
 
         document.addEventListener("DOMContentLoaded", function () {
             var nombreInput = document.getElementById("nombre");
@@ -111,9 +88,6 @@ export default {
 </script>
 
 <style>
-/* @import url('https://fonts.googleapis.com');
-@import url('https://fonts.gstatic.com');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
 @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
 .main {
